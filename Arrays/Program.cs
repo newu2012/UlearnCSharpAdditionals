@@ -8,7 +8,27 @@ public class Program
 
     public static void Main()
     {
-        // Что такое ссылочные типы и типы значения. Какие типы к чему относятся.
+        //  Что будет в переменной result?
+        var result = new int[] { 1, 2, 3 } == new int[] { 1, 2, 3 };
+        
+        //  Какое значение получить быстрее в массиве из 1000 элементов: values[0] или values[999]?
+        var values = new int[1000];
+        Console.WriteLine(values[0]);
+        Console.WriteLine(values[999]);
+        
+        //  Где хранится строка? В куче или на стеке?
+        var someString = "";
+        
+        //  Есть массив bigArray, в нём лежит 100 элементов.
+        //  Напишите код который выводит в консоль каждый второй элемент массива.
+        var bigArray = Enumerable.Range(1, 100).ToArray();
+        for (var i = 0; i < bigArray.Length; i++)
+            if (i % 2 == 0)
+                Console.WriteLine(bigArray[i]);
+        
+        
+        
+        //  Что такое ссылочные типы и типы значения. Какие типы к чему относятся.
         //  Типы значений (Value types)
         var simpleNumber = 1;
         var numberWithFloatPoint = 1.0;
