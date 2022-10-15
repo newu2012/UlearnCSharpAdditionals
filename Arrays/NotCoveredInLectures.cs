@@ -61,10 +61,11 @@ public static class NotCoveredInLectures
         // Удобно записывать в них Диапазон чисел
         numbers = Enumerable.Range(1, 10).ToArray(); 
         numbers.ToList().ForEach(Console.WriteLine);
+        numbers.ToList().ForEach(number => Console.WriteLine($"{number} is cool number"));
 
-        
+        // Копировать массив по значениям
         var numbers2 = new int[numbers.Length];
-        numbers.CopyTo(numbers2, 0); // Копировать массив по значениям
+        numbers.CopyTo(numbers2, 0);
         
         Console.WriteLine(numbers == numbers2);
         Console.WriteLine(numbers.SequenceEqual(numbers2)); // Сравнение по значению элементов
