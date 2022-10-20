@@ -29,6 +29,9 @@ public class Program
         //  Последнее (итоговое) число должно вычисляться.
         //  (6 * 7) % 4 = 2
         FormatAndPrintString();
+        
+        //  Дополнительное
+        NotCoveredInLectures.RunAllUncoveredFeatures();
     }
 
     private static void StringVsCharArray()
@@ -36,6 +39,9 @@ public class Program
         var simpleString = "Ulearn упал... Да здравствует Ulearn!";
         var simpleCharArray = new[] { 'U', 'l', 'e', 'a', 'r', 'n' };
 
+        // simpleString[0] = 'u'; // Так делать не надо. Строка - неизменяема (иммутабельна)
+        simpleCharArray[0] = 'u'; // А так можно
+        
         var otherCharArray = simpleString.ToArray();
         var otherString = simpleCharArray.ToString(); // Так делать не надо
         otherString = new string(simpleCharArray);
