@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComparisonsAndLoops", "Comp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "Arrays\Arrays.csproj", "{A1D89C8F-BE50-494F-A175-CE9EE9EABEA0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionsStringsFiles", "CollectionsStringsFiles\CollectionsStringsFiles.csproj", "{28236FAB-5703-4BE2-A157-BF6D0339F9D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{A1D89C8F-BE50-494F-A175-CE9EE9EABEA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1D89C8F-BE50-494F-A175-CE9EE9EABEA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1D89C8F-BE50-494F-A175-CE9EE9EABEA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28236FAB-5703-4BE2-A157-BF6D0339F9D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28236FAB-5703-4BE2-A157-BF6D0339F9D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28236FAB-5703-4BE2-A157-BF6D0339F9D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28236FAB-5703-4BE2-A157-BF6D0339F9D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
