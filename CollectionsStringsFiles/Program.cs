@@ -14,6 +14,10 @@ public class Program
 
         //  Когда стоит использовать string и когда нужно использовать StringBuilder?
         StringVsStringBuilder();
+        
+        //  Для чего нужно экранирование символов в строке?
+        //  Какие символы нужно экранировать?
+        CharacterEscaping();
 
         //  Что будет в переменной s после выполнения метода SetAndUpdate? Опиши почему именно так.
         SetAndUpdate();
@@ -70,6 +74,24 @@ public class Program
         stopwatch.Stop();
 
         Console.WriteLine($"Elapsed {stopwatch.ElapsedMilliseconds} milliseconds");
+    }
+
+    private static void CharacterEscaping()
+    {
+        var strings = new List<string>
+        {
+            "\"Так обходим двойные кавычки\"",
+            "\\Так обходим слэши\\",
+            "\try this",
+            "\\try this \now",
+            "a\\nd don't forget about this! \\n",
+            @"\now \try \all \of \this""""""",
+        };
+
+        foreach (var str in strings)
+        {
+            Console.WriteLine(str);
+        }
     }
 
     //  Если хотим чтобы значение действительно менялось, то надо добавить "ref"
