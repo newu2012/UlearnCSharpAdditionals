@@ -23,6 +23,7 @@ public class Program
         SetAndUpdate();
 
         //  Хорош ли этот код, почему?
+        //  File.WriteAllText("C:\test\new.txt", "123456");
         WriteAllTextToFile();
 
         //  Что выведет этот код? Что делает эта программа?
