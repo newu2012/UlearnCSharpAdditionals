@@ -5,7 +5,7 @@ namespace Recursion;
 
 public class Program
 {
-    //https://qna.habr.com/answer?answer_id=32038
+    //  https://qna.habr.com/answer?answer_id=32038
     //  Порою достаточно простого цикла, с ним и работать проще и нет проблем со стеком.
     //  Еще, лучше все таки в цикле решать задачи, где результат следующего полностью зависит
     //  от результата предыдущего (например, факториал).
@@ -45,16 +45,17 @@ public class Program
     {
         var arrayToSum = new[] { 1, 4, 1, 5, 9, 2, 6, 5, 3, 5 };
         var simpleSum = arrayToSum.Sum();
-        var recursiveSum = SumArray(arrayToSum, arrayToSum.Length - 1);
+        var recursiveSum = SumArray(arrayToSum);
         Console.WriteLine($"{simpleSum} == {recursiveSum} // {simpleSum == recursiveSum}");
     }
 
-    private static int SumArray(int[] array, int position)
+    private static int SumArray(int[] array, int position = 0)
     {
-        if (position == 0)
-            return array[position];
+        if (position == array.Length - 1)
+             return array[position];
 
-        return array[position] + SumArray(array, position - 1);
+        var currentSum = array[position] + SumArray(array, position + 1);
+        return currentSum;
     }
 
     private static int SecretRecursion(int a, int n)
