@@ -48,7 +48,7 @@ public class UlearnGame : Game
         var kstate = Keyboard.GetState();
 
         if (kstate.IsKeyDown(Keys.Up))
-            coinsPosition.Y -= coinsSpeed;
+            coinsPosition.Y -= coinsSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
         if (kstate.IsKeyDown(Keys.Down))
             coinsPosition.Y += coinsSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
         if (kstate.IsKeyDown(Keys.Left))
@@ -66,7 +66,7 @@ public class UlearnGame : Game
         // TODO: Add your drawing code here
         _spriteBatch.Begin();
         _spriteBatch.Draw(coinsTexture, coinsPosition, null, Color.Wheat,
-            0f, new Vector2(coinsTexture.Width / 2, coinsTexture.Width / 2), Vector2.One, SpriteEffects.None, 0f);
+            0f, new Vector2(coinsTexture.Width / 2, coinsTexture.Width / 2), Vector2.One / 10, SpriteEffects.None, 0f);
         _spriteBatch.End();
 
         base.Draw(gameTime);
