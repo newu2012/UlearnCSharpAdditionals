@@ -233,6 +233,8 @@ public class Program
         }
     }
 
+    //  Практика!
+    //  Припрятаны комменты, подсказки в коммите) 
     private static async Task<string> SayHiAsync(string name)
     {
         //  Обычно задержку теперь делают так
@@ -241,15 +243,20 @@ public class Program
         return $"Hi {name}!!!";
     }
 
+    //  Асинхроно запускаем таски, как посчитаются - сразу выводим
     private static void TrySayHiInForEach(List<string> names) =>
         names.ForEach(async name => Console.WriteLine(await SayHiAsync(name)));
 
+    //  Запускаем таски, но ждём выполнения перед запуском следующей
     private static async Task TrySayHiForEachOtherWay(List<string> names)
     {
         foreach (var name in names)
             Console.WriteLine(await SayHiAsync(name));
     }
 
+    //  Сначала создаём таски, а потом по отдельности запускаем.
+    //  Разница с первым вариантом в том, что если при создании таски до запуска уходит время и от этого есть задержки
+    //  То тут их не будет
     private static async Task TrySayHiThirdWay(List<string> names)
     {
         var nameHiTasks = new List<Task<string>>();
